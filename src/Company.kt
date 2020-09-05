@@ -1,84 +1,89 @@
 fun main (){
     // The iOSDeveloper :
     var iOS = iOSDeveloper()
-    iOS.name()
-    iOS.age()
-    iOS.salary()
+    iOS.name = "iOSDeveloper "
+    iOS.age =  25
+    iOS.salary = 60.000
+    println("Information about iOSDeveloper")
+    println("The Kind Of Programer is "  + iOS.name + " ***** The age is :  " + iOS.age + " ***** The Salary is : " + iOS.salary)
     iOS.iosapp()
+    println(" ****************************************")
+
+
+
 
     //androidDeveloper :
     var android = androidDeveloper()
-    android.name()
-    android.age()
-    android.salary()
+    android.name = "androidDeveloper "
+    android.age = 43
+    android.salary = 40.000
+
+    println("Information about androidDeveloper")
+    println("The Kind Of Programer is "  + iOS.name + " ***** The age is :  " + iOS.age + " ***** The Salary is : " + iOS.salary)
     android.android()
+    println(" ****************************************")
+
 
 
     //webDeveloper
     var web = webDeveloper()
-    web.name()
-    web.age()
-    web.salary()
+    web.name = "webDeveloper"
+    web.age = 40
+    web.salary = 80.000
+
+    println("Information about webDeveloper")
+    println("The Kind Of Programer is "  + iOS.name + " ***** The age is :  " + iOS.age + " ***** The Salary is : " + iOS.salary)
     web.website()
+    println(" ****************************************")
+
 }
 
-abstract class Employee(name:String , age:Int) {
-   // var  name : String = " "
-   // var age : Int = 20
-    abstract fun name ()
-    abstract fun age ()
-    abstract fun salary()
+abstract class Employee() {
+  abstract  var name :String
+    abstract var age :Int
+    abstract var salary : Double
 }
 
-class iOSDeveloper : Employee("Ali" , 25) {
-    override fun name() {
-        println("The name of iOSDeveloper is Ali")
-    }
-
-    override fun age() {
-        println("The age of iOSDeveloper is 25")
-    }
-
-    override fun salary() {
-        println("The Salary of iOSDeveloper is 10 000$")
-    }
+class iOSDeveloper : Employee() {
 
     fun iosapp(){
         println("special iosapp")
     }
 
+    override var name: String = " "
+
+
+    override var age: Int = 0
+
+    override var salary: Double = 0.0
+
+
 }
 
-class androidDeveloper : Employee("Ahmed",32) {
-    override fun name() {
-        println("The Name of androidDeveloper is Ahmed")
-    }
+class androidDeveloper : Employee() {
 
-    override fun age() {
-       println("The Age of androidDeveloper is 32")
-    }
-
-    override fun salary() {
-        println("The Salary of androidDeveloper is 20 000$")
-    }
     fun android (){
         println("special android ")
     }
+
+    override var name: String = " "
+
+    override var age: Int = 0
+
+    override var salary: Double = 0.0
+
 }
 
-class webDeveloper : Employee("Mohmmed" , 40) {
-    override fun name() {
-        println("The name of webDeveloper is Mohmmed")
-    }
+class webDeveloper : Employee() {
 
-    override fun age() {
-        println("The Age of webDeveloper is 40")
-    }
-
-    override fun salary() {
-        println("The Salary of webDeveloper is 50 000$")
-    }
     fun website(){
         println("special website ")
     }
+
+    override var name: String = "  "
+
+    override var age: Int = 0
+
+    override var salary: Double = 0.0
+
 }
